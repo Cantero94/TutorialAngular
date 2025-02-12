@@ -1,0 +1,52 @@
+<div>
+  <h1>Administración de artículos</h1>
+  <div class="row">
+    <div class="col-9">
+      @if (hayRegistros()) {
+      <table>
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Borrar</th>
+            <th>Seleccionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(art of articulos; track art.codigo) {
+          <tr>
+            <td>{{art.codigo}}</td>
+            <td>{{art.descripcion}}</td>
+            <td>{{art.precio}}</td>
+            <td><button (click)="borrar(art.codigo)">Borrar?</button></td>
+            <td><button (click)="seleccionar(art)">Seleccionar</button></td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      } @else {
+      <p>No hay articulos.</p>
+      }
+
+    </div>
+    <div class="col-3">
+      <div class="form-group">
+        <label for="codigo">Codigo:</label>
+        <input type="number" id="codigo" class="form-control" [(ngModel)]="art.codigo" />
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripcion:</label>
+        <input type="text" id="descripcion" class="form-control" [(ngModel)]="art.descripcion" />
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" class="form-control" [(ngModel)]="art.precio" />
+      </div>
+      <div class="form-group my-2 d-flex justify-content-around">
+        <button class="btn btn-primary" (click)="agregar()">Agregar</button>
+        <button class="btn btn-secondary" (click)="modificar()">Modificar</button>
+      </div>
+    </div>
+  </div>
+</div>
