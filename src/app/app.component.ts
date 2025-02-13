@@ -7,10 +7,12 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { ProgressbarComponent } from './components/progressbar/progressbar.component';
 import { FormularioreactivoComponent } from "./components/formularioreactivo/formularioreactivo.component";
 import { FormgroupreactivoComponent } from './components/formgroupreactivo/formgroupreactivo.component';
+import { FormulariocheckboxComponent } from "./components/formulariocheckbox/formulariocheckbox.component";
+import { FormularioanidadoComponent } from "./components/formularioanidado/formularioanidado.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent],
+  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

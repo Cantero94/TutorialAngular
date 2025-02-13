@@ -8,34 +8,38 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div class="container mt-5">
   <div class="row bg-light rounded shadow my-3 py-3">
-    <div class="col-6">
-      <h1 class="text-center">8. y 9. Prueba de la componente Dado</h1>
-      <div class="row d-flex align-items-center">
-        <div class="col-6">
-          <!--  <app-dado valor="{{valor1}}"></app-dado>
-                <app-dado valor="{{valor2}}"></app-dado>
-                <app-dado valor="{{valor3}}"></app-dado> -->
-          <app-dado [valor]="valor1"></app-dado>
-          <app-dado [valor]="valor2"></app-dado>
-          <app-dado [valor]="valor3"></app-dado>
-        </div>
-        <div class="col-6 text-center mt-auto">
-          <button class="btn btn-danger" (click)="tirar()">Tirar</button>
-          <p>Resultado:{{resultado}}</p>
+    <div class="col-6 ">
+      <div class="border shadow rounded h-100">
+        <h1 class="text-center">8. y 9. Prueba de la componente Dado</h1>
+        <div class="row d-flex align-items-center">
+          <div class="col-6 ">
+            <!--  <app-dado valor="{{valor1}}"></app-dado>
+                  <app-dado valor="{{valor2}}"></app-dado>
+                  <app-dado valor="{{valor3}}"></app-dado> -->
+            <app-dado [valor]="valor1"></app-dado>
+            <app-dado [valor]="valor2"></app-dado>
+            <app-dado [valor]="valor3"></app-dado>
+          </div>
+          <div class="col-6  text-center mt-auto">
+            <button class="btn btn-danger" (click)="tirar()">Tirar</button>
+            <p>Resultado:{{resultado}}</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="col-6">
-      <h1 class="text-center">10. Prueba de la componente Cronometro</h1>
-      <div class="row d-flex align-items-center">
-        <div class="col-3">
-          <!-- multiplo10 es un evento, como el onClik() -->
-          <app-cronometro [inicio]="15" (multiplo10)="actualizar($event)"></app-cronometro>
-        </div>
-        <div class="col-9">
-          <h2>Evento</h2>
-          <h3>{{mensaje}}</h3>
+    <div class="col-6 ">
+      <div class="border shadow rounded p-3">
+        <h1 class="text-center">10. Prueba de la componente Cronometro</h1>
+        <div class="row d-flex align-items-center">
+          <div class="col-3">
+            <!-- multiplo10 es un evento, como el onClik() -->
+            <app-cronometro [inicio]="15" (multiplo10)="actualizar($event)"></app-cronometro>
+          </div>
+          <div class="col-9">
+            <h2>Evento</h2>
+            <h3>{{mensaje}}</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -44,33 +48,37 @@
   <div class="row bg-light rounded shadow my-3 p-3">
     <h1 class="text-center">11. y 12. Prueba de la componente Selector Numérico</h1>
     <div class="row">
-      <div class="col-6">
-        <div class="text-center">
-          <app-selectornumerico [minimo]="1" [maximo]="10" #selector1></app-selectornumerico>
-        </div>
-        <div class="btn-group d-flex justify-content-center mt-2 px-5">
-          <button class="btn btn-danger" (click)="fijarSelector1(1)">Fijar en 1</button><br>
-          <button class="btn btn-warning" (click)="fijarSelector1(5)">Fijar en 5</button><br>
-          <button class="btn btn-success" (click)="fijarSelector1(10)">Fijar en 10</button>
+      <div class="col-6 ">
+        <div class="border shadow rounded p-3">
+          <div class="text-center">
+            <app-selectornumerico [minimo]="1" [maximo]="10" #selector1></app-selectornumerico>
+          </div>
+          <div class="btn-group d-flex justify-content-center mt-2 px-5">
+            <button class="btn btn-danger" (click)="fijarSelector1(1)">Fijar en 1</button><br>
+            <button class="btn btn-warning" (click)="fijarSelector1(5)">Fijar en 5</button><br>
+            <button class="btn btn-success" (click)="fijarSelector1(10)">Fijar en 10</button>
+          </div>
         </div>
       </div>
-      <div class="col-6">
-        <div class="text-center">
-          <app-selectornumerico [minimo]="1" [maximo]="10" #selector2></app-selectornumerico>
-        </div>
-        <div class="btn-group d-flex justify-content-center mt-2 px-5">
-          <button class="btn btn-danger" (click)="fijarSelector2(1)">Fijar en 1</button><br>
-          <button class="btn btn-warning" (click)="fijarSelector2(5)">Fijar en 5</button><br>
-          <button class="btn btn-success" (click)="fijarSelector2(10)">Fijar en 10</button>
+      <div class="col-6 ">
+        <div class="border shadow rounded p-3">
+          <div class="text-center">
+            <app-selectornumerico [minimo]="1" [maximo]="10" #selector2></app-selectornumerico>
+          </div>
+          <div class="btn-group d-flex justify-content-center mt-2 px-5">
+            <button class="btn btn-danger" (click)="fijarSelector2(1)">Fijar en 1</button><br>
+            <button class="btn btn-warning" (click)="fijarSelector2(5)">Fijar en 5</button><br>
+            <button class="btn btn-success" (click)="fijarSelector2(10)">Fijar en 10</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row bg-light rounded shadow my-3">
-    <h1>Barra de progreso</h1>
+    <h1 class="text-center">Barra de progreso</h1>
     <div class="w-75 bg-dark border-secondary rounded mx-auto my-3 p-3">
       <p class="text-white text-center">Aumenta la barra pulsando el botón o ganando en los dados</p>
-      <div>
+      <div class="border shadow rounded">
         <app-progressbar [value]="currentProgress" [max]="100"></app-progressbar>
       </div>
       <div class="text-center">
@@ -78,22 +86,41 @@
       </div>
     </div>
   </div>
-  <div class="row bg-light rounded shadow my-3">
+  <div class="row bg-light rounded shadow my-3 p-3">
     <div class="text-aling-center">
       <h1 class="text-center">13. Formulario basado en plantillas</h1>
-      <app-tabla></app-tabla>
+      <div class="border shadow rounded p-3">
+        <app-tabla></app-tabla>
+      </div>
     </div>
   </div>
 
   <div class="row bg-light rounded shadow my-3 py-3">
-    <h1>14. y 15. Formularios reactivos: ReactiveFormsModule, FormControl y FormGroup</h1>
-    <div class="col-6">
-      <div>
+    <h1 class="text-center">14. y 15. Formularios reactivos: ReactiveFormsModule, FormControl y FormGroup</h1>
+    <div class="col-6 ">
+      <div class="border shadow rounded p-3 h-100">
         <app-formularioreactivo></app-formularioreactivo>
       </div>
     </div>
+    <div class="col-6 ">
+      <div class="border shadow rounded p-3">
+        <app-formgroupreactivo></app-formgroupreactivo>
+      </div>
+    </div>
+  </div>
+
+  <div class="row bg-light rounded shadow my-3 py-3">
+    <h1 class="text-center">16. y 17. Formularios reactivos: controles checkbox, radio y select y FormGroup anidados
+    </h1>
     <div class="col-6">
-      <app-formgroupreactivo></app-formgroupreactivo>
+      <div class="border shadow rounded p-3 h-100">
+        <app-formulariocheckbox></app-formulariocheckbox>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="border shadow rounded p-3">
+        <app-formularioanidado></app-formularioanidado>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,52 @@
+<form [formGroup]="formularioConversion" (ngSubmit)="submit()" class="form-horizontal">
+    <div class="form-group">
+        <label for="numerodecimal" class="col-sm-2 control-label">Ingrese número decimal:</label>
+        <div class="col-sm-10">
+            <input type="text" formControlName="numerodecimal" class="form-control" id="numerodecimal">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Convertir a:</label>
+        <div class="col-sm-10">
+            <div class="radio">
+                <label>
+                    <input type="radio" formControlName="base" value="octal"> Octal
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" formControlName="base" value="hexadecimal"> Hexadecimal
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="potencia" class="col-sm-2 control-label">Elevar a:</label>
+        <div class="col-sm-10">
+            <select formControlName="potencia" class="form-control" id="potencia">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" formControlName="largo"> Mostrar cantidad de dígitos
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+        </div>
+    </div>
+</form>
+<div class="well">
+    <p><strong>Conversion:</strong> {{conversion}}</p>
+    <p><strong>Potencia:</strong> {{potenciaNumero}}</p>
+    <p><strong>Cantidad de dígitos:</strong> {{cantidad}}</p>
+</div>

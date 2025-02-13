@@ -1,0 +1,28 @@
+<form [formGroup]="formAlumno" (ngSubmit)="submit()" class="container mt-4">
+    <div class="form-group">
+        <label for="dni">Dni:</label>
+        <input type="text" id="dni" formControlName="dni" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" formControlName="nombre" class="form-control">
+    </div>
+    <div formGroupName="notas">
+        <div class="form-group">
+            <label for="nota1">Primer nota:</label>
+            <input type="text" id="nota1" formControlName="nota1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="nota2">Segunda nota:</label>
+            <input type="text" id="nota2" formControlName="nota2" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="nota3">Tercer nota:</label>
+            <input type="text" id="nota3" formControlName="nota3" class="form-control">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Confirmar</button>
+</form>
+<div class="mt-4">
+    <p>Resultado: <strong>{{resultado}}</strong></p>
+</div>
