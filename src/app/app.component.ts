@@ -9,10 +9,11 @@ import { FormularioreactivoComponent } from "./components/formularioreactivo/for
 import { FormgroupreactivoComponent } from './components/formgroupreactivo/formgroupreactivo.component';
 import { FormulariocheckboxComponent } from "./components/formulariocheckbox/formulariocheckbox.component";
 import { FormularioanidadoComponent } from "./components/formularioanidado/formularioanidado.component";
+import { CardAngularMaterialsComponent } from "./components/card-angular-materials/card-angular-materials.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent],
+  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent, CardAngularMaterialsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -77,7 +78,7 @@ export class AppComponent {
 
   /*******************************************************************/
   /*******************************************************************/
-  /* Prueba de la Componente ProgressBar*/
+  /* Prueba de la Componente ProgressBar */
   /*******************************************************************/
   /*******************************************************************/
   currentProgress = 0;
