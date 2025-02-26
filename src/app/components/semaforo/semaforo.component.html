@@ -1,0 +1,11 @@
+<div class="rounded bg-dark h-100 p-3 w-25 m-auto d-grid gap-1">
+    <div class="rounded-circle p-0 border-top border-white">
+        <div class="rounded-circle bg-danger p-5"  [ngClass]="{'bg-danger opacity-100': color === 'rojo', 'opacity-0': color !== 'rojo'}"></div>
+    </div>
+    <div class="rounded-circle p-0 border-top border-white">
+        <div class="rounded-circle bg-warning h-25 p-5" [ngClass]="{'bg-warning opacity-100': color === 'amarillo', 'opacity-0': color !== 'amarillo'}"></div>
+    </div>
+    <div class="rounded-circle p-0 border-top border-white">
+        <div class="rounded-circle bg-success h-25 p-5" [ngClass]="{'bg-success opacity-100': color === 'verde', 'opacity-0': color !== 'verde'}"></div>
+    </div>
+</div>

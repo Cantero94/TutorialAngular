@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="fontSize">Tamaño de fuente:</label>
+            <select id="fontSize" class="form-control" [(ngModel)]="fontSize">
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+            </select>
+        </div>
+    
+        <div class="form-group col-6">
+            <label for="fontColor">Color del texto:</label>
+            <select id="fontColor" class="form-control" [(ngModel)]="fontColor">
+                <option value="black">Negro</option>
+                <option value="red">Rojo</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarillo</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mt-4 h-100">
+        <p [ngStyle]="{'font-size': fontSize, 'color': fontColor}">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum et ipsam eveniet ducimus cumque dolores minima officia. Magni voluptatum dignissimos libero laboriosam cupiditate, iste asperiores fugit. Facilis quis cum excepturi.</p>
+    </div>
+</div>

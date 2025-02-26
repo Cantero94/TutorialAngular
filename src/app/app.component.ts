@@ -10,10 +10,12 @@ import { FormgroupreactivoComponent } from './components/formgroupreactivo/formg
 import { FormulariocheckboxComponent } from "./components/formulariocheckbox/formulariocheckbox.component";
 import { FormularioanidadoComponent } from "./components/formularioanidado/formularioanidado.component";
 import { CardAngularMaterialsComponent } from "./components/card-angular-materials/card-angular-materials.component";
+import { SemaforoComponent } from "./components/semaforo/semaforo.component";
+import { FormatoTextoComponent } from "./components/formato-texto/formato-texto.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent, CardAngularMaterialsComponent],
+  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent, CardAngularMaterialsComponent, SemaforoComponent, FormatoTextoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
