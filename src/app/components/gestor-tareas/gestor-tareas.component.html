@@ -14,13 +14,14 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row"cdkDropListGroup>
                 <div class="col-md-4">
 
-                    <div class="task-header">
+                    <div class="task-header" >
                         <h3 class="text-center">Mis Tareas</h3>
-                        <div class="rounded-container bg-info p-2">
-                            <div *ngFor="let tarea of tareas.notas" class="border rounded p-2 mb-2 bg-white">
+                        <div class="rounded-container bg-info p-2" cdkDropList [cdkDropListData]="tareas.notas"
+                            (cdkDropListDropped)="drop($event)">
+                            <div *ngFor="let tarea of tareas.notas" class="border rounded p-2 mb-2 bg-white" cdkDrag>
                                 <div class="border rounded px-2 pt-2 pb-0 mb-3 bg-light">
                                     <h6>{{ tarea.titulo }}</h6>
                                     <p>{{ tarea.descripcion }}</p>
@@ -42,13 +43,15 @@
                 <div class="col-md-4">
                     <div class="task-header">
                         <h3 class="text-center">Tareas en Ejecución</h3>
-                        <div class="rounded-container bg-warning p-2">
-                            <div *ngFor="let tarea of tareas.enEjecucion" class="border rounded p-2 mb-2 bg-white">
+                        <div class="rounded-container bg-warning p-2" cdkDropList [cdkDropListData]="tareas.enEjecucion"
+                            (cdkDropListDropped)="drop($event)">
+                            <div *ngFor="let tarea of tareas.enEjecucion" class="border rounded p-2 mb-2 bg-white" cdkDrag>
                                 <div class="border rounded px-2 pt-2 pb-0 mb-3 bg-light">
                                     <h6>{{ tarea.titulo }}</h6>
                                     <p>{{ tarea.descripcion }}</p>
                                 </div>
                                 <ul>
+                                    <li>Trabajador: {{tarea.trabajador}}</li>
                                     <li>Creado el {{ tarea.fechaCreacion }}</li>
                                     <li>En ejecución desde {{ tarea.fechaEjecucion }}</li>
                                 </ul>
@@ -66,14 +69,17 @@
                 <div class="col-md-4">
                     <div class="task-header">
                         <h3 class="text-center">Tareas Finalizadas</h3>
-                        <div class="rounded-container bg-success p-2">
-                            <div *ngFor="let tarea of tareas.finalizadas" class="border rounded p-2 mb-2 bg-white">
+                        <div class="rounded-container bg-success p-2" cdkDropList [cdkDropListData]="tareas.finalizadas"
+                            (cdkDropListDropped)="drop($event)">
+                            <div *ngFor="let tarea of tareas.finalizadas" class="border rounded p-2 mb-2 bg-white" cdkDrag>
                                 <div class="border rounded px-2 pt-2 pb-0 mb-3 bg-light">
                                     <h6>{{ tarea.titulo }}</h6>
                                     <p>{{ tarea.descripcion }}</p>
                                 </div>
                                 <ul>
+                                    <li>Trabajador: {{tarea.trabajador}}</li>
                                     <li>Creado el {{ tarea.fechaCreacion }}</li>
+                                    <li>En ejecución desde {{ tarea.fechaEjecucion }}</li>
                                     <li>Finalizado el {{ tarea.fechaFinalizacion }}</li>
                                 </ul>
                                 <div class="text-end">
