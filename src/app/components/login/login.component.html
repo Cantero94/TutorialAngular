@@ -1,0 +1,10 @@
+<div *ngIf="authService.isLoggedIn()">
+    <h1>Bienvenido</h1>
+    <p>Este contenido solo es visible para usuarios autenticados.</p>
+    <button class="btn btn-danger" (click)="authService.logout()">Cerrar sesión</button>
+  </div>
+  <div *ngIf="!authService.isLoggedIn()">
+    <h1>Login</h1>
+    <p>Por favor, inicia sesión para ver el contenido.</p>
+    <button class="btn btn-primary" (click)="authService.login()">Iniciar sesión</button>
+</div>

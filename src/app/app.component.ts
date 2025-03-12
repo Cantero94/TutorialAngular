@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { DadoComponent } from "./components/dado/dado.component";
 import { CronometroComponent } from "./components/cronometro/cronometro.component";
 import { SelectornumericoComponent } from './components/selectornumerico/selectornumerico.component';
@@ -12,10 +13,14 @@ import { FormularioanidadoComponent } from "./components/formularioanidado/formu
 import { CardAngularMaterialsComponent } from "./components/card-angular-materials/card-angular-materials.component";
 import { SemaforoComponent } from "./components/semaforo/semaforo.component";
 import { FormatoTextoComponent } from "./components/formato-texto/formato-texto.component";
+import { LoginComponent } from "./components/login/login.component";
+import { MouseOverColorComponent } from "./components/mouse-over-color/mouse-over-color.component";
+import { GestorTareasComponent } from "./components/gestor-tareas/gestor-tareas.component";
+import { DragAndDropAMaterialsComponent } from "./components/drag-and-drop-amaterials/drag-and-drop-amaterials.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent, CardAngularMaterialsComponent, SemaforoComponent, FormatoTextoComponent],
+  imports: [RouterOutlet, DadoComponent, CronometroComponent, SelectornumericoComponent, TablaComponent, ProgressbarComponent, FormularioreactivoComponent, FormgroupreactivoComponent, FormulariocheckboxComponent, FormularioanidadoComponent, CardAngularMaterialsComponent, SemaforoComponent, FormatoTextoComponent, LoginComponent, MouseOverColorComponent, GestorTareasComponent, DragAndDropAMaterialsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -91,6 +96,4 @@ export class AppComponent {
       this.currentProgress = 0;
     }
   }
-
-  
 }
